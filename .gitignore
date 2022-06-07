@@ -1,0 +1,9 @@
+.idea/
+.venv/
+#cache files
+*.pyc
+#...
+dist/
+.DS_Store
+__pycache__
+*.cast
