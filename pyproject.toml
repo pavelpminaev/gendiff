@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "hexlet-code"
+name = "generator-of-diff"
 version = "0.1.0"
-description = "Study project..."
+description = "A program that determines the difference between two data structures."
 authors = ["pavelpminaev <pavelpminaev@gmail.com>"]
 repository = "https://github.com/pavelpminaev/python-project-lvl2.git"
 classifiers = [
