@@ -11,7 +11,7 @@ classifiers = [
   "License :: Freeware",
   "Natural Language :: English",
   "Operating System :: MacOS",
-  "Topic :: Games/Entertainment"
+  "Topic :: utilities"
 ]
 packages = [
   { include = "gendiff" },
