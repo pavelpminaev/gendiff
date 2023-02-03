@@ -2,7 +2,7 @@
 """Script....."""
 
 import argparse
-
+from gendiff import generate_diff
 
 def main():
     """..."""
@@ -22,7 +22,7 @@ def main():
                         help='set format of output (default: JSON)')
 
     args = parser.parse_args()
-    print(args.difference(args.first_file, args.second_file))
+    print(generate_diff(args.first_file, args.second_file))
 
 
 if __name__ == '__main__':
