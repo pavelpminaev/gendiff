@@ -3,7 +3,7 @@ name = "generator-of-diff"
 version = "0.1.0"
 description = "A program that determines the difference between two data structures."
 authors = ["pavelpminaev <pavelpminaev@gmail.com>"]
-repository = "https://github.com/pavelpminaev/python-project-lvl2.git"
+repository = "https://github.com/pavelpminaev/python-prpoject-lvl2.git"
 classifiers = [
   "Programming Language :: Python :: 3.9",
   "Development Status :: 3 - Alpha",
