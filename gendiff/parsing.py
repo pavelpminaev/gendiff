@@ -1,38 +1,27 @@
-"""Module for parsing data from .yml and .json files.
-"""
-import _io
-import os
+"""Module for parsing data_of_file from .yml and .json files."""
+
 import json
+import os
 import yaml
 
 
 def get_ending(pathfile: str) -> str:
-    """
-    Function get ending of file
-    example: from 'gendiff/tree1.json' get '.json'.
-    """
+    """Function get ending of file."""
+
     return os.path.splitext(pathfile)[1]
 
 
-def get_data(pathfile: str) -> str:
+def parsing_data(data_of_file, ending: str) -> dict or bool:
+    """Checking opening file and return dictionary
+    with data_of_file of .json or .yml file.
     """
-    Open file and get parsing_data.
-    """
-    with open(pathfile, 'r') as data:
-        print(type(data))
-        return parsing_data(data, get_ending(pathfile))
 
-
-def parsing_data(data: _io.TextIOWrapper, ending: str) -> dict:
-    """
-    Checking opening file and return dictionary
-    with data of .json or .yml file
-    """
+    data_dict = {}
     try:
         if ending == '.yaml' or '.yml':
-            data_dict = yaml.load(data, Loader=yaml.FullLoader)
+            data_dict = yaml.load(data_of_file, Loader=yaml.FullLoader)
         elif ending == '.json':
-            data_dict = json.load(data)
+            data_dict = json.load(data_of_file)
         if data_dict is None:
             raise TypeError  # поднять TypeError
     except (TypeError, yaml.parser.ParserError):
@@ -41,6 +30,8 @@ def parsing_data(data: _io.TextIOWrapper, ending: str) -> dict:
         return data_dict
 
 
-# variable for manual checking
-pathfile2 = '/Users/pavelminaev/python-project-lvl2/tests/fixtures/tree_files/tree1.json'
-print(type(get_data(pathfile2)))
+def get_data(pathfile: str) -> dict:
+    """Open file and get parsing_data."""
+
+    with open(pathfile, 'r') as data_of_file:
+        return parsing_data(data_of_file, get_ending(pathfile))
