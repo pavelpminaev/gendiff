@@ -1,7 +1,7 @@
 """Modul search difference between two collections"""
 
 from gendiff.parsing import get_data
-from formaters.all_formaters import format_change
+from gendiff.formatters.all_formaters import format_change
 
 ERROR_MESSAGE = "Impossible to build difference. Check your files."
 
@@ -26,7 +26,7 @@ def make_diff(node1, node2):
                 value = {'type': 'changed_value',
                          'value': [node1[key], node2[key]]}
 
-        return {key, value}
+        return key, value
 
     all_keys = sorted(set.union(set(node1), set(node2)))
     deleted_keys = set(node1).difference(set(node2))
