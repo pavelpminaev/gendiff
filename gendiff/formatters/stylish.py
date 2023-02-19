@@ -55,7 +55,8 @@ def make_format(diff_dict):
             return first_line + second_line
 
         val = attributes['value']
-        return lines_form(space, status, name, get_value(val, space + 2 * STEP))
+        return lines_form(space, status, name,
+                          get_value(val, space + 2 * STEP))
 
     result = list(map(lambda item: make_lines(item, 0),
                       diff_dict.items()))

@@ -40,7 +40,8 @@ def make_format(diff_dict):
                 '.'.join(path_record), get_value(val))
 
         elif status == 'deleted':
-            new_line = "Property '{}' was removed".format('.'.join(path_record))
+            new_line = "Property '{}' was removed".format(
+                '.'.join(path_record))
 
         elif status == 'changed_value':
             del_val, add_val = attributes['value']
