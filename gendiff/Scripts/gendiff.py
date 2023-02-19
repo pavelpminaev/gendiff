@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Script for compare two configuration files and shows a difference."""
 
 import argparse
