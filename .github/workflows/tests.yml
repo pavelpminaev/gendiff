@@ -41,9 +41,9 @@ jobs:
         poetry install
     - name: Run checks
       run: |
-        poetry run flake8 learning_files/scripts
-#poetry run pytest
-#poetry run poetry check
-#poetry run pip check
-#poetry run safety check --full-report
+        poetry run flake8 gendiff
+        poetry run pytest
+        poetry run poetry check
+        poetry run pip check
+        poetry run safety check --full-report
 #poetry run sh tests/test_integration.sh
